@@ -1,6 +1,7 @@
 using Autofac;
 using JetBrains.Annotations;
 using Lykke.BilService.EthereumClassicSignService.Settings;
+using Lykke.Quintessence.Core.Utils;
 using Lykke.Quintessence.Settings;
 using Lykke.SettingsReader;
 
@@ -20,7 +21,10 @@ namespace Lykke.BilService.EthereumClassicSignService.Modules
         protected override void Load(
             ContainerBuilder builder)
         {
-            
+            var chainId = _appSettings.CurrentValue.SignService.IsMainNet ? 61 : 62;
+
+            builder
+                .RegisterChainId(chainId);
         }
     }
 }
