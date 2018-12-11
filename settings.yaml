@@ -1,6 +1,6 @@
 SignService:
   IsMainNet:
-    settings-key: EthereumClassic-IsMainNet
+    settings-key: Bcn-ETC-IsMainNet
 MonitoringServiceClient:
   MonitoringServiceUrl:
     settings-key: MonitoringServiceUrl
